@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -11,8 +12,14 @@ module.exports = {
     rules:[
       {
         test: /\.scss$/,
-        use: ['stle-loader', 'css-loader', 'sass-loader']
+        use: ['style-loader', 'css-loader', 'sass-loader']
       }
     ]
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'webpack App',
+      filename: 'index.html',
+    }),
+  ]
 };
