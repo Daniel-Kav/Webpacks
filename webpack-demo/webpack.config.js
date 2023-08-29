@@ -6,5 +6,13 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
-  mode: 'development' // Set the mode to 'development' or 'production'
+  mode: 'development', // Set the mode to 'development' or 'production'
+  module: {
+    rules:[
+      {
+        test: /\.scss$/,
+        use: ['stle-loader', 'css-loader', 'sass-loader']
+      }
+    ]
+  },
 };
