@@ -9,6 +9,7 @@ module.exports = {
     filename: '[name][contenthash].js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
+    assetModuleFilename: '[name][text]',
   },
   devtool: 'source-map',
   devServer: {
@@ -38,6 +39,10 @@ module.exports = {
         },
       },
       },
+      {
+        test: /\.(png|jpe?g|svg|ico|jpg|gif|jpeg)$/i,
+        type: 'asset/resource'
+      }
     ]
   },
   plugins: [
