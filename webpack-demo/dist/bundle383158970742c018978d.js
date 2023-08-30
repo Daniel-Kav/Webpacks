@@ -553,7 +553,7 @@ module.exports = styleTagTransform;
   \*********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "laughing[text]";
+module.exports = __webpack_require__.p + "laughing.svg";
 
 /***/ })
 
@@ -678,9 +678,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var laughImg = document.getElementById('laughImg');
+laughImg.src = _assets_laughing_svg__WEBPACK_IMPORTED_MODULE_2__;
 console.log((0,_generateJoke__WEBPACK_IMPORTED_MODULE_0__["default"])());
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundlee83ed260477b8460b2da.js.map
+//# sourceMappingURL=bundle383158970742c018978d.js.map
